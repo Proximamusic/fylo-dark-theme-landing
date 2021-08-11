@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+:root{
+    --body-font: 14px;
+    --body-font-style: 'Open Sans', sans-serif;
+    --others-font-style: 'Raleway', sans-serif;
+    --intro-email-bg: hsl(217, 28%, 15%);
+    --main-bg:hsl(218, 28%, 13%);
+    --footer-bg:hsl(216, 53%, 9%);
+    --testimonial-bg:hsl(219, 30%, 18%);
+    --cyan-call-to-action-gd: hsl(176, 68%, 64%);
+    --blue-call-to-action-gd: hsl(198, 60%, 50%);
+    --error-color:hsl(0, 100%, 63%);
+    --Neutral: hsl(0, 0%, 100%);
+}
+
+
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: var(--body-font-style);
+    font-size: var(--body-font);
+    background-color: var(--intro-email-bg);
+    position: relative;
+}
+
+.navbar{
+    width: 90%;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-list{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-item{
+    margin-right: 40px;
+    list-style-type: none;
+}
+.navbar-link{
+  text-decoration: none;
+  color: var(--Neutral);
+  font-family: var(--others-font-style);
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.navbar-link:hover{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#intro{
+    text-align: center;
+}
+#intro .big-heading{
+    color: var(--Neutral);
+    font-size: 2rem;
+    font-family: var(--others-font-style);
+    width: 46%;
+    margin: 25px auto;
+    line-height: 1.5;
+}
+
+#intro .para{
+    color: var(--Neutral);
+    width: 30%;
+    margin: 0 auto;
+    line-height: 2;
+}
+.btn{
+    width: 15%;
+    margin: 25px 0;
+    padding:15px;
+    border-radius: 30px;
+    border: none;
+    color: var(--Neutral);
+    font-family: var(--body-font-style);
+    background: var(--blue-call-to-action-gd);
+    font-weight: 700;
+
+}
+.btn:hover{
+    background: var(--cyan-call-to-action-gd);
+}
+#feature{
+    background-color: var(--main-bg);
+    position: relative;
+    color: var(--Neutral);
+    margin-top: 150px;
+}
+.destop-curve{
+    width: 100vw;
+    transform: scale(1.1);
+    position: absolute;
+    bottom:-200px;
+    z-index: -1;
+
+}
