@@ -34,6 +34,7 @@ body {
 .navbar-list {
   display: flex;
   justify-content: space-between;
+  
 }
 .navbar-item {
   margin-right: 40px;
@@ -54,7 +55,11 @@ body {
 #intro {
   text-align: center;
   position: relative;
-  height: 100vh;
+  
+  background-image: url('images/bg-curvy-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: bottom -5px center;
+  background-size: contain;
 }
 #intro .big-heading {
   color: var(--Neutral);
@@ -66,7 +71,7 @@ body {
 }
 .intro-image {
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
 }
 #intro .para {
   color: var(--Neutral);
@@ -94,10 +99,8 @@ body {
 #feature {
   background-color: var(--main-bg);
   position: relative;
-
   color: var(--Neutral);
-  margin-top: 13rem;
-  padding-top: 3rem;
+  padding-top: 6rem;
 }
 .destop-curve {
   width: 100vw;
@@ -112,7 +115,6 @@ body {
   width: 60%;
   margin: 0 auto;
   gap: 10px;
-  position: relative;
   left: 20px;
 }
 .card {
@@ -137,7 +139,7 @@ body {
 }
 .feature-image img {
   width: 100%;
-  max-width: 650px;
+  max-width: 600px;
 }
 .feature-image-text {
   margin-left: 60px;
@@ -174,7 +176,7 @@ body {
 }
 .testimonial {
   background: var(--main-bg);
-  padding: 200px 0;
+  padding: 200px 0 300px;
 }
 .testimonial-cards {
   width: 85%;
@@ -220,18 +222,23 @@ body {
   top: -8%;
 }
 footer{
-    padding: 100px 0;
+    padding: 200px 0 100px;
+    background-color: var(--footer-bg);
+    position: relative;
 }
 .footer-div {
-  max-width: 90%;
+  /* max-width: 90%; */
   margin: 0 auto;
   color: white;
   display: flex;
   justify-content: space-evenly;
 }
+.footer-item li{
+  margin-bottom: 10px;
+}
 .footer-item a {
   letter-spacing: 1px;
-  padding-bottom: 10px;
+ 
 }
 .footer-item img{
     margin-right: 10px;
@@ -239,10 +246,39 @@ footer{
 .footer-item {
   max-width: 400px;
 }
+.register-section{
+  color: white;
+  background-color: var(--main-bg);
+  width: 50%;
+  min-width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: absolute;
+  top: -200px;
+  transform: translateX(45%);
+  padding: 30px;
+}
+.register-section h2{
+  font-size: 2rem;
+}
+.register-section .para{
+  width: 90%;
+  margin: 20px auto;
+}
+.register-section input{
+  border:none;
+  width: 50%;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50px;
+  padding: 10px;
+  outline: none;
+}
 
-.socials{
-    display: flex;
-    justify-content: space-between;
+.socials i{
+  transform: scale(2);
+  padding: 10px;
 }
 
 @media (max-width: 1100px) {
@@ -251,9 +287,6 @@ footer{
   }
   .card {
     margin: 0 auto 70px;
-  }
-  .testimonial-cards {
-    /* grid-template-columns: 1fr 1fr; */
   }
   .feature-image {
     flex-direction: column;
@@ -268,9 +301,20 @@ footer{
   .testimony-card {
     margin:20px auto;
   }
-  /* .card3{
-      flex: 100%;
-  } */
+  .footer-div{
+    flex-direction: column;
+    margin-left: 50px;
+
+  }
+  .footer-item{
+    margin-bottom: 20px;
+  }
+  .socials{
+    margin: 0 0 0 37%;
+  }
+  .register-section{
+    transform: translateX(40%)
+  }
 }
 @media (max-width: 800px){
     #intro .big-heading{
@@ -279,11 +323,18 @@ footer{
     #intro .para {
         width: 40%;
     }
+    #intro {
+      background-image: url('images/bg-curvy-mobile.svg');
+    }
+    .register-section h2 {
+      font-size: 1.5rem;
+  }
+  .register-section{
+    padding: 30px 20px 10px;
+  }
 }
 @media (max-width: 600px){
-    /* .card3{
-        flex: 50%;
-    } */
+  
     #intro .big-heading{
         width: 70%;
         font-size: 1.6rem;
@@ -292,6 +343,65 @@ footer{
         width: 50%;
     }
     .feature-cards{
-        width: 75%;
+        width: 100%;
     }
+    .navbar-list{
+      padding-left: 0;
+      margin-right: 0px;
+    }
+    .navbar-item{
+      margin-right: 20px;
+      font-size: 12px;
+    }
+    .navbar img{
+      transform: scale(0.5);
+      object-fit: contain;
+    }
+    .navbar{
+      align-content: center;
+      width: 100%;
+    }
+    .feature-image-text{
+      margin-left: 0;
+    }
+    .feature-image h2 {
+      font-size: 1.1rem;
+      width: 80%;
+  }
+  .register-section{
+    transform: translateX(25%);
+  }
+  .register-section input{
+    width: 90%;
+    margin-right: 0;
+  }
+  .register-section .btn{
+    width: 100%;
+  }
+  .footer-div{
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 450px){
+  #intro .big-heading{
+    width: 80%;
+    font-size: 1.4rem;
+}
+#intro .para {
+    width: 70%;
+}
+.feature-image h2,.feature-image-text .para {
+  width: 100%;
+}
+.card{
+  width: 280px;
+  padding: 20px 9px;
+}
+.register-section {
+  transform: translateX(7%);
+}
+.socials {
+  margin: 40px 0 0 21%;
+}
 }
